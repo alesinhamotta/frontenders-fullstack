@@ -1,0 +1,14 @@
+# blueprints\view.py
+# Exibe um único registro (pad) com detalhes
+
+from flask import Blueprint, render_template
+
+view_bp = Blueprint('view', __name__)
+
+@view_bp.route("/view<int:pad_id>")
+def search_page(pad_id):
+
+    print('\n\n\n', pad_id, '\n\n\n')
+
+
+    return render_template("view.html")
